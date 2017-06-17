@@ -9,13 +9,12 @@ var config = {
 firebase.initializeApp(config);
 var database = firebase.database();
 
-$("#add-employee-btn").on("click", function(event) {
+$("#add-member-btn").on("click", function(event) {
   event.preventDefault();
   var empName = $("#name-input").val().trim();
   var empBNet = $("#bnet-input").val().trim();
   var empRole = $("#role-input").val().trim();
   var empStart = moment($("#start-input").val().trim(), "DD/MM/YY").format("X");
-  var empRate = $("#rate-input").val().trim();
   var empSR;
   var temp = empBNet.split("#");
   var empAvatar;
@@ -28,9 +27,8 @@ $("#add-employee-btn").on("click", function(event) {
   	empAvatar = response.us.stats.competitive.overall_stats.avatar;
   });
 
-  if(empName !== "" && empRole !== "" && empStart !== "" && empRate !== ""){
+  if(empName !== "" && empBNet !== "" && empRole !== "" && empStart !== ""){
     if(moment(empStart, "X", true).isValid()){
-      if($.isNumeric(empRate)){
         database.ref().push({
           name: empName,
           Bnet: empBNet,
@@ -38,17 +36,12 @@ $("#add-employee-btn").on("click", function(event) {
           currentsr: empSR,
           avatar: empAvatar,
           start: empStart,
-          rate: empRate
         });
       console.log("Employee added");
         $("#name-input").val("");
         $("#role-input").val("");
         $("#start-input").val("");
         $("#rate-input").val("");
-      }
-      else{
-        console.log("Rate is not a number.")
-        }
       }
     else{
       console.log("Date is wrong");
@@ -68,12 +61,9 @@ database.ref().orderByChild(sort).on("child_added", function(snapshot){
   var currentsr = snapshot.val().currentsr;
   var avatar = snapshot.val().avatar;
   var start = snapshot.val().start;
-  var rate = snapshot.val().rate;
   var startDate = moment.unix(start).format("dddd, MMMM Do YYYY");
   var now = moment();
   var monthsEmployed = now.diff(moment.unix(start, "X"), 'months');
-  console.log(monthsEmployed);
-  var totalBill = monthsEmployed * rate;
   console.log(snapshot.val());
 
 
@@ -83,9 +73,7 @@ database.ref().orderByChild(sort).on("child_added", function(snapshot){
       "<tr><td>" + name + 
       "</td><td>" + role + 
       "</td><td>" + currentsr + 
-      "</td><td>" + avatar + 
-      "</td><td>" + rate + 
-      "</td><td>" + totalBill +
+      "</td><td>" + avatar +
       "</td><td><button class='rm'>x</button>");  
     }
 });
