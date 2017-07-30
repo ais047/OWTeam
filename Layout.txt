@@ -1,0 +1,13 @@
+Index
+	-Team Roster
+		/DATABASE TABLE for holding player data
+
+		-Links to Individual pages
+			/Contains social media links
+
+	-Tournament
+		/DATABASE TABLE for holding Tournament data
+
+	-About
+	
+	-Contact
