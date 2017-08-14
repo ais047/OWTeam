@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>test image upload</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <center>
+            <h2>Fire SALE</h2>
+            <hr>
+            <h3><strong>Your company name</strong></h3>
+            <h4>Name (Required)</h4>
+          </center>
+    </div>
+
+<form method="POST", enctype="multipart/form-data" action="/uploadimg">
+<label for="image">Image
+</label>
+<input type="file" name="image" id ="image">
+<button type="submit" id="submit">button</button>
+</form>
+
+</body>
+<script type="text/javascript">
+
+// $("#submit").on("click", function() {
+//     $.post($("#image").val())
+//         });
+
+
+</script>
+<style type="text/css">
+.container {
+    background: url('http://wallpapercave.com/wp/TN0iVKO.jpg') !important;
+    color: red !important;
+}
+</style>
+
+</html>
