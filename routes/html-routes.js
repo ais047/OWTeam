@@ -6,19 +6,13 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/views/index.html"));
   });
 
-  app.get("/addshop", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/views/addshop.html"));
+  app.get("/team", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/views/team.html"));
   });
 
-  app.get("/myshop", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/views/myshop.html"));
+  app.get("/contact", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/views/contact.html"));
   });
-<<<<<<< HEAD
 
-  app.get("/testev", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/views/testUploadFormForImageUpload.html"));
-  });
-=======
->>>>>>> source/master
 }
 

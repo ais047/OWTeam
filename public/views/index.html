@@ -2,46 +2,86 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Simple Sidebar - Start Bootstrap Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
 
 <body>
-    <div class="container">
-        <div class="jumbotron">
-            <h1 class="text-center"><span class="glyphicon glyphicon-fire"></span> FIRE SALE!</h1>
-            <hr>
-            <h2 class="text-center">Create your own store!</h2>
-            <br>
-            <div class="text-center">
-                <a href="/addshop">
-                    <button type="button" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-list-alt"></span> Go to Survey</button>
-                </a>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Start Bootstrap
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Dashboard</a>
+                </li>
+                <li>
+                    <a href="#">Shortcuts</a>
+                </li>
+                <li>
+                    <a href="#">Overview</a>
+                </li>
+                <li>
+                    <a href="#">Events</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <h1>Simple Sidebar</h1>
+                <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
+                <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
+                <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a>
             </div>
         </div>
-        <footer class="footer">
-            <div class="container">
-                <p><a href="/api/shops">API Link</a> | <a href="https://github.com/AlexHimchak/FriendFinder">GitHub Repo</a></p>
-            </div>
-        </footer>
+        <!-- /#page-content-wrapper -->
+
     </div>
+    <!-- /#wrapper -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
 </body>
-<!-- hhttp://blacktie.co/demo/premium/dashio/frontend/demos/sliderbg_02.png
- --><style type="text/css">
-body {
-    background: url('https://www.pixelstalk.net/wp-content/uploads/2016/04/Download-fire-wallpaper-HD.jpg') no-repeat center center fixed !important;
-    background-size: cover !important;
-
-}
-.jumbotron{
-    background: url("http://www.zarofil.com/i/2017/06/red-and-blue-fire-wallpapers-hd-resolution.jpg") !important;
-    background-size: auto 100% !important;
-    color:coral;
-
-}
-
-</style>
 
 </html>
