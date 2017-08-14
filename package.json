@@ -1,5 +1,5 @@
 {
-  "name": "firesale",
+  "name": "OWTeam",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -17,12 +17,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ais047/fireSale.git"
+    "url": "git+https://github.com/ais047/OWTeam.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ais047/fireSale/issues"
+    "url": "https://github.com/ais047/OWTeam/issues"
   },
-  "homepage": "https://github.com/ais047/fireSale#readme"
+  "homepage": "https://github.com/ais047/OWTeam#readme"
 }
